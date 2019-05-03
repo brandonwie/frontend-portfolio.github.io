@@ -2,36 +2,42 @@
 * { 
   box-sizing: border-box;
 }
-  
+  /* changed the background color  */
 body {
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #222;
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: rgb(210, 110, 145);
 }
+/* added 'background-color' */
 a:hover {
-  color: #6633ff;
+  color: rgb(210, 110, 145);
+  background-color: #222;
 }
 
 /* Section Styles */
 
+/* added border-bottom */
 .main-nav {
   width: 100%;
-  background: black;
+  background: #222;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  border-bottom: 2px solid #fff;
 }
 .nav {
+  color: #ffff;
+  font-size: 18px;
   display: flex;
   justify-content: space-around;
   font-weight: 700;
@@ -39,25 +45,39 @@ a:hover {
   margin: 0 auto;
   padding: 0;
 }
+/* made a new CSS part to give the same effect as .nav .name:hover */
+.nav .home-ex:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
 
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    
 }
+/* used 'hover' attribute to change the scale */
+.nav .name:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
 .nav li {
   padding: 5px 10px 10px 10px;
 }
 .nav a {
   transition: all .5s;
+  color: #ffff;
 }
+/* added 'background-color' with 'transparent' because 'a:hover' background-color has an effect on this */
 .nav a:hover {
-  color: white
+  color: rgb(210, 110, 145);
+  background-color: transparent;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/background.jpg') no-repeat center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -70,36 +90,64 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 5px solid #222;
   transition: all .5s;
 }
+/* changed a scale and a rotate amount */
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.15) rotate(360deg);
 }
+/* changed a color and numbers */
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
   display: table;
-  margin: 10px auto;
+  margin: 5px auto;
 } 
+/* made class=brandon to make a hover effect */
+.brandon:hover {
+  color: rgb(210, 110, 145);
+  border-bottom: 2px solid #ffff;
+}
+/* changed colors */
 .location {
   background-color: #222;
-  color: yellow;
+  color: rgb(210, 110, 145);
 }
+/* added 'border-right' to make it look like a solid card */
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
+  background: rgb(200, 200, 200);
+  border-bottom: 15px solid rgb(150, 150, 150);
+  border-right: 15px solid rgb(100, 100, 100);
+  border-radius: 10px;
   transition: all .5s;
 }
+
+.card-bottom {
+    margin: 30px;
+    padding: 10px 40px 40px;
+    max-width: 500px;
+    text-align: left;
+    background: rgb(200, 200, 200);
+    border-bottom: 15px solid rgb(150, 150, 150);
+    border-right: 15px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+/* changed the color */
 .card:hover {
-  border-color: #ff99ff;
+  border-color: rgb(210, 110, 145);
+}
+
+.card-bottom:hover {
+  border-color: rgb(210, 110, 145);
 }
 
 ul.skills {
@@ -118,6 +166,25 @@ ul.skills {
 
 .skills li:nth-child(odd) {
   background: #0399ff;
+}
+
+/* learned how to put an object at the bottom right corner from https://stackoverflow.com/questions/3616572/how-to-position-a-div-in-bottom-right-corner-of-a-browser */
+.treehouse {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.treehouse:hover {
+  transform: scale(1.2) rotate(360deg);
+  transition: .5s;
+  background-color: transparent;
+}
+/* added 'hr' & Googled to give styles - http://www.sovavsiti.cz/css/hr.html */
+hr {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
 }
 
 footer {
@@ -148,7 +215,7 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
+  opacity: .65;
   transition: all .5s;
 }
 a.twitter {
@@ -160,11 +227,17 @@ a.linkedin {
 a.github {
   background-image: url(images/github.svg);
 }
+/* added 'background-color' for the same reason as '.nav a:hover' */
 a.social:hover {
   opacity: 1;
+  background-color: transparent;
 }
 .clearfix {
   clear: both;
+}
+/* added .copyright and gave a color */
+.copyright {
+  color: #fff;
 }
 
 /* Styles for larger screens */
@@ -173,11 +246,22 @@ a.social:hover {
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: flex; 
+      flex-wrap: wrap;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
   }
+/* learned from https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_wrap to put the '.card-bottom' at the bottom of '.card' */
+  .flex-bottom {
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+}
 
   header {
     min-height: 470px;
@@ -205,3 +289,107 @@ a.social:hover {
 
 }
 
+/* Styles for Contact - newly made */
+
+.tag-contact {
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  display: table;
+  margin: 170px auto; 
+}
+
+.discuss {
+  text-align: center;
+}
+
+.email-whole {
+  text-align: center;
+}
+
+.email {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url(images/email.svg);
+}
+
+.card-contact {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 800px;
+  text-align: left;
+  background: rgb(200, 200, 200);
+  border-bottom: 15px solid rgb(150, 150, 150);
+  border-right: 15px solid rgb(100, 100, 100);
+  border-radius: 10px;
+  transition: all .5s;
+}
+/* changed the color */
+.card-contact:hover {
+  border-color: rgb(210, 110, 145);
+}
+
+/* Styles for larger screens in Contact - newly made */
+
+@media screen and (min-width: 720px) {
+  
+  .flex-contact {
+      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: flex; 
+      max-width: 1200px;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 0 auto;
+  }
+}
+
+/* Styles for Experience -newly made */
+.card-experience {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 800px;
+  text-align: left;
+  background: rgb(200, 200, 200);
+  border-bottom: 15px solid rgb(150, 150, 150);
+  border-right: 15px solid rgb(100, 100, 100);
+  border-radius: 10px;
+  transition: all .5s;
+}
+
+.card-experience:hover {
+  border-color: rgb(210, 110, 145);
+}
+
+.learning {
+  text-align: center;
+}
+
+.html-sub {
+  background-color: grey;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  display: table;
+  margin: 5px auto;
+}
+
+.list-experience {
+  list-style-type: none;
+}
+/* learned how to put an image to unordered list in this discussion from https://stackoverflow.com/questions/7775594/css-list-style-image-size */
+.list-experience li:before{
+  content: '';
+  display: inline-block;
+  background-image: url('images/list-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+}

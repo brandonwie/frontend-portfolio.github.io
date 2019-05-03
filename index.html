@@ -1,55 +1,90 @@
 <!doctype html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="utf-8">
-  <title>Jane Smith's Profile</title>
+  <title>Brandon Wie's Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+ </head>
+  
   <body>
 
     <div class="main-nav">
         <ul class="nav">
-          <li class="name">Jane Smith</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Experience</a></li>
+          <li class="name"><a href="index.html">Brandon Wie</a></li>
+          <!-- gave a class to Home and Experience as "home-ex" to connect with CSS -->
+          <li class="home-ex"><a href="index.html">Home</a></li>
+          <li class="home-ex"><a href="experience.html">Experience</a></li>
+          <li class="home-ex"><a href="contact.html">Contact</a></li>
+          
         </ul>
     </div>
 
     <header>
-      <img src="images/me.png" alt="Drawing of Jane Smith" class="profile-image">
-      <h1 class="tag name">Hello, I’m Jane.</h1>
-      <p class="tag location">My home is Portland, Oregon.</p>
+      <img src="images/profile.jpg" alt="Brandon in Vancouver, Canada" class="profile-image">
+      <h1 class="tag name">Hello, I’m <span class="brandon">Brandon</span>.</h1>
+      <p class="tag location">My home is <em>Seoul, Korea</em>.</p>
     </header>
-
-    <main class="flex">
+    <!-- I had to make another 'div' to put class='flex' to put my third box on the bottom. This was the hardest challenge. -->
+  <main>
+    <div class="flex">
       <div class="card">
-        <h2>Background</h2>
-        <p>I’m an aspiring web designer who loves everything about the web. I've lived in lots of different places and have worked in lots of different jobs. I’m excited to bring my life experience to the process of building fantastic looking websites.</p>
-        <p>I’ve been a professional cook and gardener and am a life-long learner who's always interested in expanding my skills.</p>
+        <h2>&lt;Background&gt;</h2>
+        <h3>Creativity is what I love the most!</h3>
+          <p>&nbsp;I’m an arising web developer who loves all about creations on the web. As I studied in <em>Film &amp; Theater</em>, I love to create something that is beautiful and touching.
+            <!-- I know I should not use 'br' for the sake of aesthetics, but I didn't learn yet from Treehouse what to use to write on the next line. 'p' contains preset-empty-spaces up and down and I didn't want to make another paragraph. You feedback will be helpful. Thank you. -->
+             I’m more than happy to bring my life experience to the process of building websites and web applications.</p>
+        <p>&nbsp;I was an independent film maker, a manager and a salesman. I am a enthusiastic life-long learner who's always interested in getting new knowledge and expanding my skills.</p>
+        <p>Now, I live in Dubai, am looking forward to see myself after 6 months as a programmer on the field!</p>
       </div> 
 
       <div class="card">
-        <h2>Goals</h2>
-        <p>I want to master the process of building web sites and increase my knowledge, skills and abilities in:</p>
+        <h2>&lt;Goals&gt;</h2>
+        <h3>Prepare for the future!</h3>
+        <p>&nbsp;I aim to be a full-stack developer who has understands the entire process of building web sites and web applications. Currently, I am learning from the Treehouse that offers the best online web development courses. I've been working on increasing my knowledge, skills and abilities in:</p>
         <ul class="skills">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
-          <li>Ruby</li>
-          <li>Rails</li>
+          <li>React</li>
+          <li>jQuery</li>
+          <li>Angular</li>
         </ul>
-        <p>I’d like to work for a web design firm helping clients create an impressive online presence.</p>
-      </div> 
+        <p>&nbsp;I’d like to work with a web design or a web development company helping clients create an impressive online presence.</p>
+       </div>
+    </div> 
 
-    </main>
+    <div class="flex-bottom">
+      <div class="card-bottom">
+          <h2>&lt;What I love to do&gt;</h2>
+          <h3><strong>Coding is not everything of me.</strong></h3>
+          <p>Here's what I love to do:</p>
+          <ol class="my-list">
+            <li>Watching <em>Nexflix</em></li>
+            <li>Playing <em>Guitar</em></li>
+            <li>Listening <em>Music</em></li>
+            <li>Playing <em>Piano</em></li>
+            <li>Playing <em>Basketball</em></li>
+          </ol>  
+          <p>&nbsp;Well, it does look like a clich&eacute;, but that's me! I've learned most of my English skills from the US television series and Nexflix! I can't wait to see Game of Thrones season 8!</p> 
+          
+       </div>
+    </div>
+      <!-- learned how to resize images from Google: https://www.google.com/search?q=how+to+resize+photo+in+css&rlz=1C5CHFA_enAE837AE844&oq=how+to+resize+photo+in+css&aqs=chrome..69i57j0l5.7742j0j4&sourceid=chrome&ie=UTF-8 -->
+      <a class="treehouse" href="https://teamtreehouse.com" target="_blank"><img src="images/treehouse.png" alt="team treehouse logo" height="80" width="80" title="Visit TreeHouse"></a>     
+  </main>
+          <!-- added 'hr' attribute and 'class' -->
+          <hr>
     <footer>
       <ul>
-        <li><a href="#" class="social twitter">Twitter</a></li>
-        <li><a href="#" class="social linkedin">LinkedIn</a></li>
-        <li><a href="#" class="social github">Github</a></li>
+        <!-- added target attributes to open with a new tab -->
+        <li><a href="https://www.twitter.com/brandon_wie" class="social twitter" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/brandonwie" class="social linkedin" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/brandonwie" class="social github" target="_blank">Github</a></li>
       </ul>
-      <p class="copyright">Copyright 2015, Jane Smith</p>
+      <!-- added a 'small' attribute to make it more reasonable -->
+      <p class="copyright"><small>&copy;2019, Brandon Wie</small></p>
     </footer>
-  </body>
+   </body>
   </html>
