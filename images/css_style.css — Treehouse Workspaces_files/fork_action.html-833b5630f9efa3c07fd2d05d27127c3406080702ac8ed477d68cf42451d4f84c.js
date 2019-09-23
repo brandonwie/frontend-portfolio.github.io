@@ -1,0 +1,2 @@
+define(function(){return"<li> <a href='#fork' id='fork-tab' title='Fork Workspace'> <span class='th-icon-fork'></span> </a> </li>"});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm51bGwiXSwibmFtZXMiOlsiZGVmaW5lIl0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBTyxXQUNMLE1BQU8ifQ==

@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#termcontainer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+}
+
+
+.terminal {
+  font-family: "Source Code Pro", "DejaVu Sans Mono", "Liberation Mono", monospace;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.terminal > div {
+  white-space: nowrap;
+}
